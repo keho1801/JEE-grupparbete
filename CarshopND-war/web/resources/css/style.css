@@ -1,0 +1,32 @@
+body{
+    background-color: #E0FFFF;
+}
+
+#login-form{
+    margin-top: 15%;
+    background-color: white !important;
+    padding-top: 50px;
+    padding-bottom: 10px;
+}
+
+.btn-large{
+    width: 100% !important;
+    margin-bottom: 3%;
+}
+
+.validator{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.ac-small {
+    overflow: scroll!important;
+    position: absolute!important;
+    top: 50px!important;
+}
+
+#cart-dialog{
+
+}
+
+

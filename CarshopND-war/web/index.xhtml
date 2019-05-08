@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Facelet Title</title>
+        <!--        <h:outputStylesheet library="css" name="style.css"  />-->
+
+    </h:head>
+    <h:body>
+
+        <div class="ui-g">
+            <div class="ui-g-4"></div>
+            <f:view>
+                <h:form class="ui-g-4" id="login-form">
+                    <p:panel id="panel" header="Logga in">
+                        <div class="ui-g">
+                             <div class="ui-g-6">
+                                <h:outputLabel for="username" value="Användarnamn:" />
+                            </div>
+                            <div class="ui-g-6">
+                                <p:inputText id="username" value="#{loginController.username}"  label="username" placeholder="Användarnamn" style="width: 100%"/>
+                            </div>
+                            <div class="ui-g-6" >
+                                <h:outputLabel for="password" value="Lösenord" />
+                            </div>
+                            <div class="ui-g-6">
+                                <p:password id="password" value="#{loginController.password}"  label="Lösenord" placeholder="Lösenord" style="width: 100%;"/>
+                            </div>
+
+                            <div class="ui-g-12">
+                                <p:commandButton id="gText" value="Logga in" update="panel" action="#{loginController.logIn()}" style="width: 100%"/>
+                            </div>
+                            <div class="ui-g-12">
+                                <p:commandButton value="Registrera ny användare" id="register" action="register?faces-redirect=true" style="width: 100%"/>
+                            </div>
+                            <div class="ui-g-12">
+                                <p:messages id="msgs" />
+                            </div>
+                        </div>
+                    </p:panel>
+                </h:form>
+            </f:view>
+            <div class="ui-g-4"></div>
+        </div>
+
+    </h:body>
+</html>
+

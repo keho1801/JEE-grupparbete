@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"/>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    </h:head>
+    <h:body>
+        <div class="container">
+            <div class="row">
+                <f:view>
+                    <h:form class="col s3 offset-s4" id="login-form">
+                        <h:outputText value="Namn"></h:outputText>
+                        <h:inputText id="jText1" value="#{registerController.name}"></h:inputText>
+                        <h:message class="validator" for="jText1" errorStyle="color: red" infoStyle="color: red"></h:message>
+                        <br></br>
+                        <h:outputText value="Användarnamn"></h:outputText>
+                        <h:inputText id="jText2" value="#{registerController.username}"></h:inputText>
+                        <h:message class="validator" for="jText2" errorStyle="color: red" infoStyle="color: red"></h:message>
+                        <br></br>
+                        <h:outputText value="Lösenord"></h:outputText>
+                        <h:inputText id="jText3" value="#{registerController.password}"></h:inputText>
+                        <h:message class="validator" for="jText3" errorStyle="color: red" infoStyle="color: red"></h:message>
+                        <br></br>
+                        <h:outputText value="Adress"></h:outputText>
+                        <h:inputText id="jText4" value="#{registerController.address}"></h:inputText>
+                        <h:message class="validator" for="jText4" errorStyle="color: red" infoStyle="color: red"></h:message>
+                        <br></br>
+                        <h:commandButton value="Registrera" class="btn-large" action="#{registerController.register()}"/>
+                        <br></br>
+                        <h:outputText style="color: red" value="#{registerController.facesMessage.detail}"/>
+                    </h:form>
+                </f:view>
+            </div>
+        </div>
+    </h:body>
+</html>
+
